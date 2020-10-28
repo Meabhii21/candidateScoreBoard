@@ -1,0 +1,29 @@
+<%-include("partials/header")%>
+<h1>Result Page:</h1>
+
+
+    <table>
+        <tr>
+            <th>Candidate Name:</th>
+            <th colspan="3">Candidate Scores</th>
+            <th>Average Scores:</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>First Round</td>
+            <td>Second Round</td>
+            <td>Third Round</td>
+        </tr>
+        <% scoreOfCandidates.forEach(function(student){ %>
+        <tr>
+            <td><%=student.name%></td>
+            <td><%=student.first_round%></td>
+            <td><%=student.second_round%></td>
+            <td><%=student.third_round%></td>
+            <td><%=student.avg_score%></td>
+        </tr>
+        <% }); %>
+    </table>
+    
+    <a href="/">Go-To Candidate Info</a>
+<%-include("partials/footer")%>
